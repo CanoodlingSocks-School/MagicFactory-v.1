@@ -9,6 +9,7 @@ namespace MagicFactory_v._1
     abstract class Inventory
     {
         protected Dictionary<string, int> materials { get; set; } = new Dictionary<string, int>();
+
         public Inventory()
         {
             materials.Add("Metal", 0);
@@ -18,17 +19,17 @@ namespace MagicFactory_v._1
 
         public void AddInventory(string material, int numberOf)
         {
-
+            
             materials[material] = materials[material] + numberOf;
-
+            
         }
-
         public void PrintInventory()
         {
             foreach (var de in materials)
             {
                 Console.WriteLine($"{de.Key} : {de.Value}");
             }
+            
         }
 
     }

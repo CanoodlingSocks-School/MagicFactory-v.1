@@ -8,5 +8,6 @@ namespace MagicFactory_v._1
 {
     class Factory : Inventory
     {
+        
     }
 }

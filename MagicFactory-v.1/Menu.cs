@@ -10,17 +10,17 @@ namespace MagicFactory_v._1
     {
         public void MenuOptions()
         {
+            Player player = new();
             bool menuLoop = true;
             while (menuLoop)
             {
                 Console.Clear();
-                Player player = new();
                 Console.WriteLine("1. Add materials\n2. See inventory\n");
-                ConsoleKey input = Console.ReadKey(true).Key;
+                ConsoleKey input = Console.ReadKey(true).Key;  
 
-                if (input == ConsoleKey.D1)
+                if (input == ConsoleKey.D1)   //TODO Flytta nedanstående till klass Material och kalla enbart på metoden här
                 {
-                    Console.WriteLine("\n\nWhat material do you want to add?\n");
+                        Console.WriteLine("\n\nWhat material do you want to add?\n");
                     string material = Console.ReadLine();
 
                     if (material == "Metal" || material == "Rubber" || material == "Wood")
